@@ -10,7 +10,8 @@ function criarUsuario({nome, email,senha, dataDeNascimento}){
 }
 
 function pegarUsuarios(){
-   return getCollection().find().toArray();
+
+   return getCollection().find({}).toArray();
 }
 function pegarUsuarioPorNome(nome){
     return getCollection().find({nome}).toArray();
@@ -19,24 +20,20 @@ function pegarUsuarioPorId(id){
     return getCollection().find({_id:ObjectId(id)}).toArray();
 }
 
-function editarUsuarioPorId(dados,id){
-    return  getCollection().updateOne({_id:ObjectId(id)},{$set:{...dados}});
-}
 function editarEmailDeUsuario(email,id){
-    return  getCollection().updateOne({_id:ObjectId(id)},{$set:{email:email}});
+    console.log(email);
+    console.log(id);
+    return  getCollection().updateOne({_id:ObjectId(id)},{$set: {"email":email}});
 }
-function deletarUsuarioPorId({nome, email,senha, dataDeNascimento}){
-    const usuario = {
-        nome:nome
-    };
-    
-    return getCollection.deleteOne(usuario);
+function deletarUsuarioPorId(id){
+    return getCollection().deleteOne({_id:ObjectId(id)});
+
 }
 module.exports = {
     criarUsuario,
     pegarUsuarios,
     pegarUsuarioPorNome,
     pegarUsuarioPorId,
-    editarUsuarioPorId,
+    editarEmailDeUsuario,
     deletarUsuarioPorId
 }

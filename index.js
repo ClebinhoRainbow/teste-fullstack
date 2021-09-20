@@ -4,8 +4,8 @@ const UsuariosDAO = require('./usuariosDAO')
 server.use(express.json());
 
 
-server.get('/usuarios/pegaTodosUsuarios', (req, res) => {
-return res.json(usuarios);
+server.get('/usuarios/pegaTodosUsuarios', async (req, res) => {
+    return res.send(await UsuariosDAO.pegarUsuarios());
 }) 
 
 server.get('/usuarios/pegaUsuarioPorId/:id', async (req, res) => {
@@ -20,24 +20,25 @@ server.post('/usuarios/criarUsuario', async (req, res) => {
     return res.send(usuarioCriado); 
     
     })
+
 server.put('/usuarios/editarUsuario/:id', async (req, res) => {
     const { id } = req.params;
-
-    const usuario = UsuariosDAO.editarUsuarioPorId(req.body,id);
-    
-    
-    return res.send(usuarios);
+    const usuario = await UsuariosDAO.editarUsuarioPorId(req.body,id);
+    return res.send(usuario);
     }); 
 
-server.patch('/usuarios/mudarEmail', async(req, res)=>{
+server.patch('/usuarios/mudarEmail/:id', async(req, res)=>{
     const {email} = req.body;
+    const {id} = req.params;
+    const usuario = await UsuariosDAO.editarEmailDeUsuario(email,id);
+    return res.send(usuario);
+
     
 });
 
-server.delete('/usuarios/:index', (req, res) => {
-    const { index } = req.params; 
-    usuarios.splice(index, 1); 
-    
-    return res.send();
-    }); 
+server.delete('/usuarios/apagarUsuarioPorId/:id',async (req, res) => {
+    const {id} = req.params; 
+    const deletado = await UsuariosDAO.deletarUsuarioPorId(id); 
+    return  res.send(deletado);
+}); 
     server.listen(3000);
