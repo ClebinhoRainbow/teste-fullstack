@@ -1,0 +1,5 @@
+const axios = require('axios');
+
+const localApi = axios.create({ baseURL: 'SUA_URL_DA_API_LOCAL' });
+const localApi = axios.create({ baseURL: 'http://localhost:3000' });
+const usuarios = localApi.get(/pegaTodosUsuarios)

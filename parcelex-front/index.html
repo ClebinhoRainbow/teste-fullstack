@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parcelex</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+   
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="initial_bar">
+            <button>Criar Usuario</button>
+            <div>
+                <label for="search-bar">Pesquisar Usuario</label>
+                <input type="text">
+            </div>
+      </div>
+      <div class="main_list">
+        <div class="left-side">
+            <div class="head-table">
+                <ul class="columns">
+                    <li>Id</li>
+                    <li>Nome</li>
+                    <li>E-mail</li>
+                    <li>Data de Nascimento</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <!-- aqui vão os icones de editar e remover -->
+        </div>
+        <button>Carregar Mais</button>
+    </div>
+
+    <!-- import app -->
+    <script src="./main.js"></script>
+    <!-- mout app -->
+    <script>
+        const mountedApp = app.mount("#app")
+    </script>
+  </body>
+</html>

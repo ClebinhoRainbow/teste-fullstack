@@ -1,0 +1,12 @@
+.initial_bar{
+    margin: 5% auto;
+    height: 20vh;
+    width: 60vw;
+    background-color: #c4c4c4;
+    display: flex;
+    padding: 0 5%;
+    justify-content:space-between;
+    button{
+        height: 30px;
+    }
+}
