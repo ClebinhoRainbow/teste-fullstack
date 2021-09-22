@@ -11,7 +11,10 @@ server.get('/usuarios/pegaTodosUsuarios', async (req, res) => {
 server.get('/usuarios/pegaUsuarioPorId/:id', async (req, res) => {
     const { id } = req.params;
     const  usuario = await UsuariosDAO.pegarUsuarioPorId(id);
-    return res.send(usuario);
+    if(usuario.length > 0){
+        return res.send(usuario);
+    }
+    else return res.send({status:404});
 })
 
 server.post('/usuarios/criarUsuario', async (req, res) => {
@@ -23,7 +26,7 @@ server.post('/usuarios/criarUsuario', async (req, res) => {
 
 server.put('/usuarios/editarUsuario/:id', async (req, res) => {
     const { id } = req.params;
-    const usuario = await UsuariosDAO.editarUsuarioPorId(req.body,id);
+    const usuario = await UsuariosDAO.editarUsuarioPorId({id,"updateData":{...req.body}});
     return res.send(usuario);
     }); 
 
