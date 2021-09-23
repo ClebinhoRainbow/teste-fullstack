@@ -1,105 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Parcelex</title>
-    <link rel="stylesheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="./assets/styles.css" />
-   
-    <script src="https://unpkg.com/vue@next"></script>
-   
-  </head>
-  <body>
-    <div id="app">
-   
-     <nav class="container">
-        <div class="initial_bar">
-          <button>Criar Usuario</button>
-          <div>
-              <label for="search-bar">Pesquisar Usuario</label>
-              <input type="text">
-          </div>
-        </div>
-      </nav>
-      <main>
-        <div class="main_list">
-          <div class="head-table">
-            <ul class="columns">
-                <li>Id</li>
-                <li>Nome</li>
-                <li>E-mail</li>
-                <li>Data de Nascimento</li>
-            </ul>
-          </div>
-         <div class="main_list_feed">
-            <div class="left-side">
-              <ul class="columns">
-                <li>Id</li>
-                <li>Nome</li>
-                <li>E-mail</li>
-                <li>Data de Nascimento</li>
-              </ul>
-              <ul class="columns">
-                <li>Id</li>
-                <li>Nome</li>
-                <li>E-mail</li>
-                <li>Data de Nascimento</li>
-              </ul>
-              <ul class="columns">
-                <li>Id</li>
-                <li>Nome</li>
-                <li>E-mail</li>
-                <li>Data de Nascimento</li>
-              </ul>
-              <ul class="columns">
-                <li>Id</li>
-                <li>Nome</li>
-                <li>E-mail</li>
-                <li>Data de Nascimento</li>
-              </ul>
-              <ul class="columns">
-                <li>Id</li>
-                <li>Nome</li>
-                <li>E-mail</li>
-                <li>Data de Nascimento</li>
-              </ul>
-            </div>
-            <div class="right-side">
-              <div class="container">
-                <img src="./assets/edit/1x/outline_edit_black_24dp.png" alt="">
-              <img src="./assets/delete/1x/outline_delete_black_24dp.png" alt="">
-              </div>
-              <div class="container">
-                <img src="./assets/edit/1x/outline_edit_black_24dp.png" alt="">
-              <img src="./assets/delete/1x/outline_delete_black_24dp.png" alt="">
-              </div>
-              <div class="container">
-                <img src="./assets/edit/1x/outline_edit_black_24dp.png" alt="">
-              <img src="./assets/delete/1x/outline_delete_black_24dp.png" alt="">
-              </div>
-              <div class="container">
-                <img src="./assets/edit/1x/outline_edit_black_24dp.png" alt="">
-              <img src="./assets/delete/1x/outline_delete_black_24dp.png" alt="">
-              </div>
-              <div class="container">
-                <img src="./assets/edit/1x/outline_edit_black_24dp.png" alt="">
-              <img src="./assets/delete/1x/outline_delete_black_24dp.png" alt="">
-              </div>
-           
-            </div>
-         </div>
-        </div>
-          
-          <button>Carregar Mais</button>
-      </main>
-     
-    </div>
 
-    <!-- import app -->
-    <script src="./main.js"></script>
-    <!-- mout app -->
-    <script>
-        const mountedApp = app.mount("#app")
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Parcelex</title>
+  <link rel="stylesheet" href="./assets/reset.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+  <div id="app">
+    <nav class="container">
+      <nav-bar-home></nav-bar-home>
+      <!-- <nav-bar-voltar></nav-bar-voltar> -->
+    </nav>
+    <user-display></user-display>
+    <!-- <edit-user></edit-user> -->
+    <!-- <delete-user></delete-user> -->
+    <!-- <edit-email></edit-email> -->
+  </div>
+
+  <!-- import app -->
+  <script src="./main.js"></script>
+  <!-- import UserDisplay -->
+  <script src="./components/UserDisplay.js"></script>
+  <!-- import Nav Bar Home -->
+  <script src="./components/NavBarHome.js"></script>
+  <!-- import Nav Bar Voltar -->
+  <script src="./components/NavBarVoltar.js"></script>
+  <!-- import Editar Usuario -->
+  <script src="./components/EditarUsuario.js"></script>
+  <!-- import Deletar Usuario -->
+  <script src="./components/DeleteUser.js"></script>
+  <!-- import Editar Email Usuario -->
+  <script src="./components/EditarEmail.js"></script>
+
+  <!-- mout app -->
+  <script>
+    const mountedApp = app.mount("#app")
+  </script>
+</body>
+
 </html>
