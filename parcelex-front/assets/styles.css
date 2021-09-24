@@ -36,24 +36,36 @@ button {
 }
 
 .container .initial_bar .search_bar ::-webkit-input-placeholder {
+  background-image: url("./search/search.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   text-align: right;
 }
 
 .container .initial_bar .search_bar :-ms-input-placeholder {
+  background-image: url("./search/search.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   text-align: right;
 }
 
 .container .initial_bar .search_bar ::-ms-input-placeholder {
+  background-image: url("./search/search.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   text-align: right;
 }
 
 .container .initial_bar .search_bar ::placeholder {
+  background-image: url("./search/search.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   text-align: right;
@@ -245,5 +257,98 @@ main .main_list .main_list_feed .right-side .container {
   border: 1px solid black;
   border-radius: 5px;
   width: 100%;
+}
+
+.container_edit_user {
+  width: 70%;
+}
+
+.container_edit_user form {
+  width: 100%;
+}
+
+.container_edit_user form .name_and_mail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container_edit_user form .name_and_mail .input_nome {
+  margin-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.container_edit_user form .name_and_mail .input_nome input {
+  background-color: #c4c4c4;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 1.5rem;
+}
+
+.container_edit_user form .name_and_mail .input_email {
+  margin-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.container_edit_user form .name_and_mail .input_email input {
+  background-color: #c4c4c4;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 1.5rem;
+}
+
+.container_edit_user form .password_and_date {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_edit_user form .password_and_date div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container_edit_user form .password_and_date div input {
+  background-color: #c4c4c4;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 1.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

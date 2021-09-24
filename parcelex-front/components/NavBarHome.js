@@ -6,7 +6,7 @@ app.component('nav-bar-home',{
   template:
   `
   <div class="initial_bar">
-        <button>Criar Usuario</button>
+        <button v-on:click="changeToEditUser">Criar Usuario</button>
         <div class="search_bar">
         <input  type="text" placeholder="Pesquisar Usuario">
         <i class="fa fa-search"></i>
